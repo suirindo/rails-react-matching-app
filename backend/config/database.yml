@@ -3,7 +3,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: password
+  password: "password"
   host: db
 
 development:
@@ -20,10 +20,3 @@ production:
   username: <%= ENV["DATABASE_USERNAME"] %>
   password: <%= ENV["DATABASE_PASSWORD"] %>
   host: <%= ENV["DATABASE_HOST"]  %>
-
-
- # GRANT ALL ON myapp_development.* TO root;
-
-#GRANT ALL ON db.* TO 'root'@'backend_api_run_f758f891e842.backend_default'
-
-#GRANT ALL ON *.* TO 'root'@'backend_api_run_f758f891e842.backend_default'
